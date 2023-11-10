@@ -1,48 +1,34 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const inventarioSlice = createSlice({
-  name: 'inventario',
-  initialState: {
-    isSaving: false,
-    messageSaved: '',
-    notes: [],
-    active: null,
-  },
-  reducers: {
-    savingNewNote: (state) => {
-      state.isSaving = true;
+    name: 'inventario',
+    initialState: {
+        laptops: [],
+        pcs: [],
+        errorMessage: '',
+        view: 'Pcs'
     },
-    addNewEmptyNte: (state, action) => {
-      state.notes.push(action.payload);
-      state.isSaving = false;
-    },
-    setActiveNote: (state ,action) => {
-      state.active = action.payload;
-    },
-    setNotes: (state ,action) => {
-      state.notes = action.payload;
-    },
-    setSaving: (state) => {
-      
-    },
-    updateNote: (state ,action) => {
-      
-    },
-    deleteNoteById: (state ,action) => {
-      
+    reducers: {
+        getAllPcsDB: (state, { payload }) => {
+            state.pcs = payload;
+            state.errorMessage = null;
+        },
+        createNewPcs: (state, { payload }) => {
+            state.pcs.push(payload);
+            state.errorMessage = null;
+        },
+        changeView: (state, { payload }) => {
+            state.view = payload;
+            state.errorMessage = null;
+        }
     }
-  }
 });
 
 
- // Action creators are generated for each case reducer function
+// Action creators are generated for each case reducer function
 export const {
-  savingNewNote,
-  addNewEmptyNte,
-  setActiveNote,
-  setNotes,
-  setSaving,
-  updateNote,
-  deleteNoteById,
+    createNewPcs,
+    getAllPcsDB,
+    changeView,
 } = inventarioSlice.actions;
 export default inventarioSlice;

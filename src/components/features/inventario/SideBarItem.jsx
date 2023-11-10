@@ -1,46 +1,34 @@
-import { Grid, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
-import { useMemo } from "react";
+import {
+  Grid,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
+import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import { useDispatch } from "react-redux";
-import { setActiveNote } from "../../../store/inventario/inventarioSlice";
+import { changeView } from "../../../store/inventario/inventarioSlice";
 
-
-const SideBarItem = ({ title = '', body, id, date, imageUrls = [] }) => {
-
+const SideBarItem = ({ title = "" }) => {
   const dispatch = useDispatch();
 
-  const newTitle = useMemo(() => {
-    return title.length > 17
-    ? title.substring(0, 17) + '...'
-    :title; 
-  }, [title]);
-
   const onActiveNote = () => {
-    dispatch(setActiveNote({
-      title,
-      id,
-      date,
-      body,
-      imageUrls,
-    }))
-
-  }
+    console.log(title);
+    dispatch(changeView(title));
+  };
 
   return (
     <ListItem disablePadding>
-      <ListItemButton
-        onClick={onActiveNote}
-      >
+      <ListItemButton onClick={onActiveNote}>
         <ListItemIcon>
-          <TurnedInNotIcon/>
+          <TurnedInNotIcon />
         </ListItemIcon>
         <Grid container>
-          <ListItemText primary={ newTitle } />
-          <ListItemText secondary={ body } />
+          <ListItemText primary={title} />
         </Grid>
       </ListItemButton>
     </ListItem>
-  )
-}
+  );
+};
 
 export default SideBarItem;

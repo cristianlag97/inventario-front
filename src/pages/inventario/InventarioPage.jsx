@@ -3,45 +3,27 @@ import { AddOutlined } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { InventarioLayout } from "../../components/layouts/InventarioLayout";
 import { NothingSelectedView } from "../../views/NothingSelectedView";
-import { NoteView } from "../../views/NoteView";
-
+import { PcsView } from "../../views/PcsView";
+import { LaptopsView } from "../../views/LaptosView";
 
 export const InventarioPage = () => {
-
   const dispatch = useDispatch();
 
   const onClickNewNote = () => {
     dispatch(startNewNote());
-  }
+  };
 
-  const { isSaving, active } = useSelector(state => state.inventario);
-
+  const { view } = useSelector((state) => state.inventario);
 
   return (
     <InventarioLayout>
-
-      {
-        !!active
-        ? <NothingSelectedView/>
-        : <NoteView/>
-      }
-
-      <IconButton
-        onClick={ onClickNewNote }
-        disabled={isSaving}
-        size='large'
-        sx={{
-          color: 'white',
-          backgroundColor: 'error.main',
-          ':hover': {backgroundColor: 'error.main', opacity: 0.9},
-          position: 'fixed',
-          right: 50,
-          bottom: 50,
-        }}
-      >
-        <AddOutlined/>
-      </IconButton>
-
+      {view === "Pcs" ? (
+        <PcsView />
+      ) : view === "Laptops" ? (
+        <LaptopsView />
+      ) : (
+        <NothingSelectedView />
+      )}
     </InventarioLayout>
-  )
-}
+  );
+};

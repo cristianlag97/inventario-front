@@ -30,7 +30,7 @@ export const Navbar = ({ drawerWidth = 240 }) => {
         </IconButton>
 
         <Grid container direction='row' justifyContent='space-between' alignItems='center'>
-          <Typography variant='h6' noWrap component='div'>Inventario</Typography>
+          <Typography variant='h6' noWrap component='div'>Inventario-EVT</Typography>
           <IconButton
             color='error'
             onClick={onLogout}

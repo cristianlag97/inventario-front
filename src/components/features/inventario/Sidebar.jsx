@@ -1,67 +1,53 @@
-import {
-  Box,
-  Divider,
-  Drawer,
-  List,
-  Toolbar,
-  Typography
-} from "@mui/material";
+import { Box, Divider, Drawer, List, Toolbar, Typography } from "@mui/material";
 
 import { useSelector } from "react-redux";
 import SideBarItem from "./SideBarItem";
 
-
 export const Sidebar = ({ drawerWith = 240 }) => {
-
-  const { name } = useSelector(state => state.auth);
-  // const { notes } = useSelector(state => state.journal);
+  const { name } = useSelector((state) => state.auth);
 
   return (
     <Box
-      component='nav'
-      sx={ {width: {sm: drawerWith}, flexShrink: {sm: 0} }}
+      component="nav"
+      sx={{ width: { sm: drawerWith }, flexShrink: { sm: 0 } }}
     >
       <Drawer
-        variant='permanent' //temporary
+        variant="permanent" //temporary
         open
         sx={{
-          display: {xs: 'block'},
-          '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWith}
+          display: { xs: "block" },
+          "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWith },
         }}
       >
         <Toolbar>
-          <Typography varian='h6' noWrap component='div'>
-            { name }
+          <Typography varian="h6" noWrap component="div">
+            {name}
           </Typography>
         </Toolbar>
-        
-        <Divider/>
+
+        <Divider />
 
         <List>
-          {
-            menuData.map(menu =>(
-              <SideBarItem key={menu.id} { ...menu.title }/>
-            ))
-          }
+          {menuData.map((menu) => (
+            <SideBarItem key={menu.id} {...menu} />
+          ))}
         </List>
-
       </Drawer>
     </Box>
-  )
-}
-
+  );
+};
 
 const menuData = [
   {
     id: 1,
-    title: 'Usuarios',
+    title: "Usuarios",
   },
   {
     id: 2,
-    title: 'Pcs',
+    title: "Pcs",
   },
   {
     id: 3,
-    title: 'Laptops',
+    title: "Laptops",
   },
 ];
