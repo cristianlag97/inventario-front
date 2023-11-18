@@ -60,6 +60,7 @@ export const LaptopsView = () => {
             sx={{ border: "none", mb: 1 }}
           />
         </Grid>
+        
       </Grid>
 
       <Disponible />

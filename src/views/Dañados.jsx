@@ -6,19 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { createonePc, getAllPcs } from "../store/inventario/thunks";
 import { useEffect } from "react";
 
-
-
-
-
-
-
-export const PcsView = () => {
+export const Dañados  = () => {
   const dispatch = useDispatch();
-  
 
-  useEffect(() => {
-    dispatch(getAllPcs());
-  }, []);
 
   const {
     referencia,
@@ -67,7 +57,7 @@ export const PcsView = () => {
         <Grid item>
           <Button type="submit" color="primary" sx={{ padding: 2 }}>
             <SaveOutlined sx={{ fontSize: 30, mr: 1 }} />
-            Guardar PC
+            Guardar Dañado
           </Button>
         </Grid>
 
@@ -149,21 +139,6 @@ export const PcsView = () => {
               onChange={onInputChanged}
               sx={{ border: "none", mb: 1 }}
             />
-          </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Activo Pantalla"
-              label="Activo Pantalla"
-              name="activopantalla"
-              value={activopantalla}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}  
-              />    
-              
-
           </Grid>
         </Grid>
 

@@ -50,4 +50,16 @@ const menuData = [
     id: 3,
     title: "Laptops",
   },
+  {
+    id: 4,
+    title: "Asignados Pc",
+  },
+  {
+    id: 5,
+    title: "Asignados Portatil"
+  },
+  {
+    id: 6,
+    title: "Dañados",
+  },
 ];
