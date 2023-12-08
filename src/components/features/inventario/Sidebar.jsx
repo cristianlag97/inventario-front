@@ -40,7 +40,7 @@ export const Sidebar = ({ drawerWith = 240 }) => {
 const menuData = [
   {
     id: 1,
-    title: "Usuarios",
+    title: "Renuncia",
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const menuData = [
   },
   {
     id: 4,
-    title: "Asignados Pc",
+    title: "Asignados PC",
   },
   {
     id: 5,
@@ -62,4 +62,5 @@ const menuData = [
     id: 6,
     title: "Dañados",
   },
+ 
 ];

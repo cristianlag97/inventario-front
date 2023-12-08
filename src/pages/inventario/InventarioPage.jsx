@@ -5,9 +5,10 @@ import { InventarioLayout } from "../../components/layouts/InventarioLayout";
 import { NothingSelectedView } from "../../views/NothingSelectedView";
 import { PcsView } from "../../views/PcsView";
 import { LaptopsView } from "../../views/LaptosView";
-import { Asignados }   from "../../views/Asignados";
-import { AsignadosPort} from "../../views/AsignadosPort"
+import { Asignados } from "../../views/Asignados";
+import { AsignadosPort} from "../../views/AsignadosPort";
 import { Dañados } from "../../views/Dañados";
+import { Renuncia} from "../../views/Renuncia";
 
 
  
@@ -32,7 +33,9 @@ export const InventarioPage = () => {
         <AsignadosPort/>  
       ) : view === "Dañados" ?(
         <Dañados/>  
-      ) : (  <NothingSelectedView />
+      ) : view === "Renuncia" ?(
+        <Renuncia/>
+      ) :(  <NothingSelectedView />
       )}
     </InventarioLayout>
   );

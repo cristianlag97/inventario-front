@@ -4,6 +4,7 @@ import { Disponible } from "../components/features/inventario/Disponible";
 
 export const LaptopsView = () => {
   return (
+    
     <Grid
       className="animate__animated animate__fadeIn animate__faster"
       container

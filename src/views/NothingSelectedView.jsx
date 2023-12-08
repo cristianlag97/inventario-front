@@ -1,5 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import StarOutline from '@mui/icons-material/StarOutline'
+import Alert from 'bootstrap/js/dist/alert';
+import { Tooltip, Toast, Popover } from 'bootstrap'
 
 export const NothingSelectedView = () => {
   return (

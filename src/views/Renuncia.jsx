@@ -1,5 +1,4 @@
 
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Alert from 'bootstrap/js/dist/alert';
 import { Tooltip, Toast, Popover } from 'bootstrap';
@@ -8,8 +7,8 @@ import { Tooltip, Toast, Popover } from 'bootstrap';
 
 
 
-export const Asignados  = () => {
-   
+export const Renuncia  = () => {
+    
   
  {
 
@@ -36,8 +35,7 @@ export const Asignados  = () => {
       <th scope="col">Activo PC</th>
       <th scope="col">Service Tag Pantalla</th>
       <th scope="col">Activo Pantalla</th>
-      <th scope="col">Renuncia</th>
-      <th scope="col">Cambio de equipo</th>
+      
       
     </tr>
   </thead>
@@ -52,25 +50,6 @@ export const Asignados  = () => {
       <td>@mdo</td>
        <td>Mark</td>
       <td>Otto</td>
-      <td>
-        <a href="#" class="btn btn-danger">Renunicia</a>
-      </td>
-       <td>Mark</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>
-      <a href="#" class="btn btn-danger">Renunicia</a>
-      </td>
-      <td>Jacob</td>
       
     </tr>
     <tr>
@@ -83,10 +62,20 @@ export const Asignados  = () => {
       <td>@fat</td>
       <td>Jacob</td>
       <td>Thornton</td>
-      <td>
-      <a href="#" class="btn btn-danger">Renunicia</a>
-      </td>
+      
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
       <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      
     </tr>
   </tbody>
 </table>

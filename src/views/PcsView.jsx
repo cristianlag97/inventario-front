@@ -14,6 +14,7 @@ import { useEffect } from "react";
 
 export const PcsView = () => {
   const dispatch = useDispatch();
+
   
 
   useEffect(() => {
@@ -54,9 +55,11 @@ export const PcsView = () => {
 
   return (
     <form
+
       onSubmit={onSubmit}
       className="animate__animated animate__fadeIn animate__faster"
     >
+      
       <Grid
         container
         direction="row"
@@ -150,21 +153,7 @@ export const PcsView = () => {
               sx={{ border: "none", mb: 1 }}
             />
           </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Activo Pantalla"
-              label="Activo Pantalla"
-              name="activopantalla"
-              value={activopantalla}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}  
-              />    
-              
-
-          </Grid>
+          
         </Grid>
 
         <Disponible />
