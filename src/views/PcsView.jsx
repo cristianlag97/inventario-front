@@ -54,110 +54,110 @@ export const PcsView = () => {
   };
 
   return (
-    <form
-
+    <>
+      <form
       onSubmit={onSubmit}
       className="animate__animated animate__fadeIn animate__faster"
-    >
-      
-      <Grid
-        container
-        direction="row"
-        justifyContent="flex-end"
-        alignItems="center"
-        sx={{ mb: 1 }}
       >
-        <Grid item>
-          <Button type="submit" color="primary" sx={{ padding: 2 }}>
-            <SaveOutlined sx={{ fontSize: 30, mr: 1 }} />
-            Guardar PC
-          </Button>
-        </Grid>
+        <Grid
+          container
+          direction="row"
+          justifyContent="flex-end"
+          alignItems="center"
+          sx={{ mb: 1 }}
+        >
+          <Grid item>
+            <Button type="submit" color="primary" sx={{ padding: 2 }}>
+              <SaveOutlined sx={{ fontSize: 30, mr: 1 }} />
+              Guardar PC
+            </Button>
+          </Grid>
 
-        <Grid container spacing={2}>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Referencia"
-              label="Referencia"
-              name="referencia"
-              value={referencia}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}
-            />
+          <Grid container spacing={2}>
+            <Grid item sm={12} md={6}>
+              <TextField
+                typ="text"
+                variant="filled"
+                fullWidth
+                placeholder="Referencia"
+                label="Referencia"
+                name="referencia"
+                value={referencia}
+                onChange={onInputChanged}
+                sx={{ border: "none", mb: 1 }}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TextField
+                typ="text"
+                variant="filled"
+                fullWidth
+                placeholder="Modelo"
+                label="Modelo"
+                name="modelo"
+                value={modelo}
+                onChange={onInputChanged}
+                sx={{ border: "none", mb: 1 }}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TextField
+                typ="text"
+                variant="filled"
+                fullWidth
+                placeholder="Service Tad"
+                label="Service Tag"
+                name="servicetag"
+                value={servicetag}
+                onChange={onInputChanged}
+                sx={{ border: "none", mb: 1 }}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TextField
+                typ="text"
+                variant="filled"
+                fullWidth
+                placeholder="Activo PC"
+                label="Activo PC"
+                name="activopc"
+                value={activopc}
+                onChange={onInputChanged}
+                sx={{ border: "none", mb: 1 }}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TextField
+                typ="text"
+                variant="filled"
+                fullWidth
+                placeholder="Service Tad Pantalla"
+                label="Service Tag Pantalla"
+                name="servicetagpantalla"
+                value={servicetagpantalla}
+                onChange={onInputChanged}
+                sx={{ border: "none", mb: 1 }}
+              />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TextField
+                typ="text"
+                variant="filled"
+                fullWidth
+                placeholder="Activo Pantalla"
+                label="Activo Pantalla"
+                name="activopantalla"
+                value={activopantalla}
+                onChange={onInputChanged}
+                sx={{ border: "none", mb: 1 }}
+              />
+            </Grid>
+            
           </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Modelo"
-              label="Modelo"
-              name="modelo"
-              value={modelo}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}
-            />
-          </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Service Tad"
-              label="Service Tag"
-              name="servicetag"
-              value={servicetag}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}
-            />
-          </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Activo PC"
-              label="Activo PC"
-              name="activopc"
-              value={activopc}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}
-            />
-          </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Service Tad Pantalla"
-              label="Service Tag Pantalla"
-              name="servicetagpantalla"
-              value={servicetagpantalla}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}
-            />
-          </Grid>
-          <Grid item sm={12} md={6}>
-            <TextField
-              typ="text"
-              variant="filled"
-              fullWidth
-              placeholder="Activo Pantalla"
-              label="Activo Pantalla"
-              name="activopantalla"
-              value={activopantalla}
-              onChange={onInputChanged}
-              sx={{ border: "none", mb: 1 }}
-            />
-          </Grid>
-          
-        </Grid>
 
-        <Disponible />
-      </Grid>
-    </form>
+        </Grid>
+      </form>
+      <Disponible />
+    </>
   );
 };

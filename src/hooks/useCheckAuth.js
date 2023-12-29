@@ -14,10 +14,11 @@ const useCheckAuth = () => {
     const id = localStorage.getItem('userId');
 
     useEffect(() => {
-
-        validateToken({ id }).then((user) => {
+        console.log(id);
+        validateToken({id}).then((user) => {
+            console.log(`EL RESULTADO es: ${user}`)
             if (user == null) return dispatch(logout());
-            console.log(user);
+            
 
             const { id, name, email } = user;
             dispatch(login({ id, email, name }));

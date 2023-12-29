@@ -1,13 +1,5 @@
 
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Alert from 'bootstrap/js/dist/alert';
-import { Tooltip, Toast, Popover } from 'bootstrap';
-
-
-
-
-
 export const Asignados  = () => {
    
   

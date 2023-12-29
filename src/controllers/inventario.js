@@ -63,7 +63,7 @@ export const getPcs = async() => {
 
     try {
         const resp = await axios.get(url, config);
-        console.log('==========');
+        console.log(resp);
 
 
         const pcs = resp.data.pcs;

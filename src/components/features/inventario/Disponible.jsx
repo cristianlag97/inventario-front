@@ -39,7 +39,7 @@ export const Disponible = () => {
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>,
+      </form>
       <br/>
       
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
@@ -61,7 +61,7 @@ export const Disponible = () => {
         <TableBody>
           {pcs.map((pc) => (
             <TableRow
-              key={pc.referencia}
+              key={pc.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
@@ -87,54 +87,54 @@ export const Disponible = () => {
                   <div className="modal-header">
                     <h1 className="modal-title fs-5" id="Asignar">Informacion del Funcionario</h1>
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div className="modal-body">
-                <form>
-                <div className="mb-2">
-                  <label htmlFor="Name" className="form-label ">Nombre</label>
-                  <input type="text" className="form-control" id="Nombre" aria-describedby="Nombre"/>
-                  <div id="Nombre" className="form-text"></div>    
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Area" className="form-label">Area</label>
-                  <input type="text" className="form-control" id="Area" aria-describedby="Area"/>
-                  <div id="Area" className="form-text"></div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Referencia" className="form-label">Referencia</label>
-                  <input type="text" className="form-control" id="Referencia" aria-describedby="Referencia"/>
-                  <div id="Referencia" className="form-text"></div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Modelo" className="form-label">Modelo</label>
-                  <input type="text" className="form-control" id="Modelo" aria-describedby="Modelo"/>
-                  <div id="Modelo" className="form-text"></div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Service" className="form-label">Service Tag</label>
-                  <input type="text" className="form-control" id="Service" aria-describedby="Service"/>
-                  <div id="Service" className="form-text"></div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Activo" className="form-label">Activo Pc</label>
-                  <input type="text" className="form-control" id="Activo" aria-describedby="Activo"/>
-                  <div id="Activo" className="form-text"></div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Tag" className="form-label">Service Tag Pantalla</label>
-                  <input type="text" className="form-control" id="Tag" aria-describedby="Tag"/>
-                  <div id="Tag" className="form-text"></div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="Pantalla" className="form-label">Activo Pantalla</label>
-                  <input type="text" className="form-control" id="Pantalla" aria-describedby="Pantalla"/>
-                  <div id="Pantalla" className="form-text"></div>
-                </div>
-                <a href="#">Descargar</a>
-                <form action="procesar.php" method="post"encType="multipart/form-data">
+                  </div>
+                  <div className="modal-body">
+                    <form>
+                      <div className="mb-2">
+                        <label htmlFor="Name" className="form-label ">Nombre</label>
+                        <input type="text" className="form-control" id="Nombre" aria-describedby="Nombre"/>
+                        <div id="Nombre" className="form-text"></div>    
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Area" className="form-label">Area</label>
+                        <input type="text" className="form-control" id="Area" aria-describedby="Area"/>
+                        <div id="Area" className="form-text"></div>
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Referencia" className="form-label">Referencia</label>
+                        <input type="text" className="form-control" id="Referencia" aria-describedby="Referencia"/>
+                        <div id="Referencia" className="form-text"></div>
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Modelo" className="form-label">Modelo</label>
+                        <input type="text" className="form-control" id="Modelo" aria-describedby="Modelo"/>
+                        <div id="Modelo" className="form-text"></div>
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Service" className="form-label">Service Tag</label>
+                        <input type="text" className="form-control" id="Service" aria-describedby="Service"/>
+                        <div id="Service" className="form-text"></div>
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Activo" className="form-label">Activo Pc</label>
+                        <input type="text" className="form-control" id="Activo" aria-describedby="Activo"/>
+                        <div id="Activo" className="form-text"></div>
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Tag" className="form-label">Service Tag Pantalla</label>
+                        <input type="text" className="form-control" id="Tag" aria-describedby="Tag"/>
+                        <div id="Tag" className="form-text"></div>
+                      </div>
+                      <div className="mb-2">
+                        <label htmlFor="Pantalla" className="form-label">Activo Pantalla</label>
+                        <input type="text" className="form-control" id="Pantalla" aria-describedby="Pantalla"/>
+                        <div id="Pantalla" className="form-text"></div>
+                      </div>
+                {/* <a href="#">Descargar</a> */}
+              </form>
+              <form action="procesar.php" method="post"encType="multipart/form-data">
                 <label htmlFor="archivo">Subir Acta</label>
                 <input type="file" name="archivo" id="archivo"/>
-                </form>
               </form>
                     </div>
                     <div className="modal-footer">
